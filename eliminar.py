@@ -1,6 +1,6 @@
 import json
 from config import RUTA_SERVICIOS
-
+#correcion de la ruta
 def eliminar_servicio():
     nombre_servicio = input("Ingrese el nombre del paquete a eliminar: ")
 
@@ -26,4 +26,4 @@ def eliminar_servicio():
         print("El archivo no existe.")
     except json.JSONDecodeError:
         print("Error al leer el archivo JSON.")
-        #
+        
