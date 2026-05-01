@@ -1,15 +1,16 @@
 import json
+from config import RUTA_SERVICIOS
 
 def cargar():
     try:
-        with open("Ruta_servicios.json", "r", encoding="utf-8") as archivo:
+        with open(RUTA_SERVICIOS, "r", encoding="utf-8") as archivo:
             return json.load(archivo)
     except FileNotFoundError:
         return []
 
 
 def guardar(servicios):
-    with open("Ruta_servicios.json", "w", encoding="utf-8") as archivo:
+    with open(RUTA_SERVICIOS, "w", encoding="utf-8") as archivo:
         json.dump(servicios, archivo, indent=4, ensure_ascii=False)
 
 

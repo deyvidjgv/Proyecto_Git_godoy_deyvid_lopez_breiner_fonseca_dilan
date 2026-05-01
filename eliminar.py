@@ -2,7 +2,7 @@ import json
 
 
 #funcion eliminar servicio
-def eliminar_servicio(nombre_servicio, archivo="data.json"):
+def eliminar_servicio(nombre_servicio, archivo="Ruta_servicios.json"):
     try:
         with open(archivo, "r", encoding="utf-8") as f:
             servicios = json.load(f)
@@ -11,7 +11,7 @@ def eliminar_servicio(nombre_servicio, archivo="data.json"):
             if servicio["nombre"].lower() != nombre_servicio.lower()
         ]
         if len(servicios) == len(nuevos_servicios):
-            print("⚠️ Servicio no encontrado.")
+            print("Servicio no encontrado.")
             return
         with open(archivo, "w", encoding="utf-8") as f:
             json.dump(nuevos_servicios, f, indent=4, ensure_ascii=False)

@@ -1,3 +1,7 @@
+from edit_service import *
+import json
+from add_services import *
+from eliminar import *
 
 while True:
     print("====================================================")
@@ -13,13 +17,13 @@ while True:
 
 
     if opcion == "1":
-        
+            registrar()
 
     elif opcion == "2":
-        
+            editar_servicio()
 
     elif opcion == "3":
-       
+            eliminar_servicio()
 
     elif opcion == "4":
         salir = input("¿Quieres salir del programa Si/No: ").capitalize()
